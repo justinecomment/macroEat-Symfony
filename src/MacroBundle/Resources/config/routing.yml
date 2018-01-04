@@ -1,0 +1,7 @@
+accueil_home:
+    path: /
+    defaults: { _controller: MacroBundle:Nutriments:index }
+
+macro_home:
+    path: /nutriments
+    defaults: { _controller: MacroBundle:Nutriments:nutriments }

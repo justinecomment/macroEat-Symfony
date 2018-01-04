@@ -1,0 +1,5 @@
+macro:
+    resource: '@MacroBundle/Resources/config/routing.yml'
+    prefix: /
+
+    

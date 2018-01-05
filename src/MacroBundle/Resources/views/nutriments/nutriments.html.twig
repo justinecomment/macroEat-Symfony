@@ -1,9 +1,48 @@
 {% extends 'base.html.twig' %}
-
-
-
-{% block title %} Accueil {% endblock %}
+{% block title %} Nutriments {% endblock %}
 
 {% block body %}
-    <p>Nutriments</p>
+    <section class="content-nutriments">
+        <h2>Catégories</h2>
+        <div class="rond">
+            <i class="fa fa-apple" aria-hidden="true"></i>
+        </div>
+        <hr/>
+
+        <div class="categories">
+            <section>
+                <ul>
+                    {% for categorie in categories|slice(0, 5) %}
+                        <li>
+                            <img src="{{ asset('bundles/macro/images/categories/' ~ categorie.name ~ '.jpg') }}" />
+                            <h3 class="name">{{ categorie.name }}</h3>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <hr/>
+                        </li>  
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    {% for categorie in categories|slice(5, 5) %}
+                        <li>
+                            <div class="image">
+                                <img src="{{ asset('bundles/macro/images/categories/' ~ categorie.name ~ '.jpg') }}" />
+                            </div>
+                            <h3 class="name">{{ categorie.name }}</h3>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <hr/>
+                        </li>  
+                    {% endfor %}
+                </ul>
+            </section>
+
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="{{ asset('bundles/macro/js/nutriments.js') }}"></script>
 {% endblock %}

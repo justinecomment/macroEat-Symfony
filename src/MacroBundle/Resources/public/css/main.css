@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+li{
+    list-style-type: none;
+}
+
 /* NAV */
 .navbar-nav>li a:hover{
     color: blue !important;
@@ -22,7 +26,7 @@
     color: #15678c !important;
 }
 
-.fa-apple{
+nav .fa-apple{
     font-size: 32px !important;
     display: block !important;
     padding-left: 27%;
@@ -32,4 +36,80 @@
     margin-top: 11%;
     color: #fff !important;
     font-size: 27px !important;
+}
+
+
+/** NUTRIMENTS **/
+.content-nutriments{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.categories .name, 
+.categories .image{
+    display: inline-block;
+}
+
+.categories img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.categories .name{
+    color: #03a9f4;
+    padding: 0px 0px 0px 22px;
+}
+
+.categories ul li{
+    margin-bottom: 45px;
+}
+
+.categories section{
+    display: inline-block;
+    width: 48%;
+}
+
+.categories section:nth-of-type(1){
+    margin-right: 30px;
+}
+
+.categories hr{
+    border-top: 1px solid #d8d8d8;
+    margin: 6px 1px 3px 68px;
+}
+
+.categories .fa-angle-right{
+    float: right;
+    margin: 40px 8px 0px 27px;
+    font-size: 25px;
+    color: #03a9f4;
+}
+
+.content-nutriments > hr{
+    border-top: 1px solid #bfbfbf;
+    margin-bottom: 9%;
+}
+
+.rond .fa-apple{
+    font-size: 30px;
+    color: #fff;
+    padding: 9px 13px 0px 13px;
+}
+
+.content-nutriments > h2{
+    text-align: center;
+}
+
+.content-nutriments .rond{
+    width: 50px;
+    height: 50px;
+    background-color: #03a9f4;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.categories ul li:hover{
+    background-color: #ccefff;
+    cursor: pointer;
 }

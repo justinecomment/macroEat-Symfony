@@ -6,7 +6,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
        
         {% block stylesheets %}
-            {% stylesheets '@MacroBundle/Resources/public/css/*.css' filter='cssrewrite' %}
+            {% stylesheets '@MacroBundle/Resources/public/css/*.css'  %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css">
             {% endstylesheets %}
         {% endblock %}

@@ -40,7 +40,6 @@ class ProfilType extends AbstractType
                 'choices'  => array(
                     'Peu actif'         => 'Peu actif' ,
                     'Moyennement actif' => 'Moyennement actif',
-                    'Actif'             => 'Actif' ,
                     'Très actif'        => 'Très actif' ,
                 )
             ));

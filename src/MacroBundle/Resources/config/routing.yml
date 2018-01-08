@@ -5,3 +5,7 @@ accueil_home:
 macro_home:
     path: /nutriments
     defaults: { _controller: MacroBundle:Nutriments:nutriments }
+
+macro_calculatrice:
+    path: /calculatrice
+    defaults: { _controller: MacroBundle:Nutriments:calculatrice }

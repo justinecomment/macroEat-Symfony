@@ -21,18 +21,16 @@ class NutrimentsController extends Controller
         $categories = $em->getRepository('MacroBundle:categorie')->findAll();
 
         $nomImage = null;
-        foreach ($categories as $value){
-            if ($value->getName() == $nomImage){
-                $nomImage ="fruits";
-            }
-
-        }
-
+      
         return $this->render('MacroBundle:nutriments:nutriments.html.twig', array(
             'categories' => $categories,
             'nomImage'   => $nomImage
-      
         ));
+    }
+
+    public function calculatriceAction()
+    {
+        return $this->render('MacroBundle:calculatrice:index.html.twig', array());
     }
     
 }

@@ -32,6 +32,12 @@ nav .fa-apple{
     padding-left: 27%;
 }
 
+nav .fa-calculator{
+    font-size: 32px !important;
+    display: block !important;
+    /* padding-left: 27%; */
+}
+
 .navbar-brand{
     margin-top: 11%;
     color: #fff !important;
@@ -113,3 +119,6 @@ nav .fa-apple{
     background-color: #ccefff;
     cursor: pointer;
 }
+
+
+/** CALCULATrice **/

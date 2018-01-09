@@ -43,44 +43,44 @@
             {{ form_rest(form) }}
         </section>
 
-        <section class="resultat-content" id="resultat">
-            <h3>Votre Résultat personnalisé</h3>
-            <div class="rond">
-                <i class="fa fa-calculator" aria-hidden="true"></i>
-            </div>
-            <hr/>
-
-
-            <div class="resultat-choix">
-                <h4>Perdre du poids</h4>
+        {% if poidPerdre is not null %}
+            <section class="resultat-content" id="resultat">
+                <h3>Votre Résultat personnalisé</h3>
                 <div class="rond">
-                    <i class="fa fa-minus" aria-hidden="true"></i> 
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
                 </div>
-                    <h5> {{poidPerdre}} kcal </h5>
-                <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de perdre entre 0,5 et 1 kg par semaine d'une manière saine et durable.
+                <hr/>
+
+                <div class="resultat-choix">
+                    <h4>Perdre du poids</h4>
+                    <div class="rond">
+                        <i class="fa fa-minus" aria-hidden="true"></i> 
+                    </div>
+                        <h5> {{poidPerdre}} kcal </h5>
+                    <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de perdre entre 0,5 et 1 kg par semaine d'une manière saine et durable.
+                    </div>
                 </div>
-            </div>
 
-            <div class="resultat-choix">
-                <h4>Stabiliser son poids</h4>
-                <div class="rond">
-                    <i class="fa fa-check" aria-hidden="true"></i>
+                <div class="resultat-choix">
+                    <h4>Stabiliser son poids</h4>
+                    <div class="rond">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                        <h5> {{ poidStabiliser }} kcal </h5>
+                    <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de stabiliser votre poids actuel.</div>
                 </div>
-                    <h5> {{ poidStabiliser }} kcal </h5>
-                <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de stabiliser votre poids actuel.</div>
-            </div>
 
-            <div class="resultat-choix">
-                <h4>Prendre du poids</h4>
-                <div class="rond">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
+                <div class="resultat-choix">
+                    <h4>Prendre du poids</h4>
+                    <div class="rond">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                        <h5> {{ poidPrendre }} kcal </h5>
+                    <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de prendre entre 0,5 et 1 kg par semaine.</div>
                 </div>
-                    <h5> {{ poidPrendre }} kcal </h5>
-                <div>Consommation calorique par jour <br> Ce niveau de consommation de calories quotidien vous permettra de prendre entre 0,5 et 1 kg par semaine.</div>
-            </div>
-
-
-        </section>
+            </section>
+        {% endif %}
+        
     </form>
 
  {% endblock %}

@@ -35,10 +35,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ path('macro_calculatrice') }}">
+                        <a href="">
                             <i class="fa fa-calculator" aria-hidden="true" style="display:block; font-size: 30px; padding-left: 27%;"></i>
                             Calculatrice
                         </a>
+                        <ul class="menu">
+                            <li>
+                                <a href="{{ path('macro_calculatrice') }}">Calcul Calories</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{{ path('macro_calculatrice_imc') }}">Calcul IMC</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

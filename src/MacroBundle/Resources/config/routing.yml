@@ -9,3 +9,7 @@ macro_home:
 macro_calculatrice:
     path: /calculatrice
     defaults: { _controller: MacroBundle:Nutriments:calculatrice }
+
+macro_calculatrice_imc:
+    path: /calculatrice/IMC
+    defaults: { _controller: MacroBundle:Nutriments:imc }

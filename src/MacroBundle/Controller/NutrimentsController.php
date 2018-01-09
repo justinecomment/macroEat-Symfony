@@ -36,9 +36,9 @@ class NutrimentsController extends Controller
         $form = $this->createForm(ProfilType::class, $profil)->handleRequest($request);
         
         $calories       = null;
-        $poidPerdre     = '_ _';
-        $poidStabiliser = '_ _';
-        $poidPrendre    = '_ _';
+        $poidPerdre     = null;
+        $poidStabiliser = null;
+        $poidPrendre    = null;
 
         if ($form->isSubmitted() && $form->isValid() ) {
             dump($profil);
@@ -90,7 +90,6 @@ class NutrimentsController extends Controller
                 $poidStabiliser = $calories;
                 $poidPrendre = $calories + 200;
             };
-            //ancre
         };
 
         return $this->render('MacroBundle:calculatrice:index.html.twig', array(
@@ -100,6 +99,11 @@ class NutrimentsController extends Controller
             'poidPrendre' => $poidPrendre,
         ));
 
+    }
+
+    public function imcAction(Request $request)
+    {
+        return $this->render('MacroBundle:calculatrice:imc.html.twig', array() );
     }
     
 }

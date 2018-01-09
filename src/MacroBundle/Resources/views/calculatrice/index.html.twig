@@ -3,7 +3,7 @@
 
 
 {% block body %}
-    <form action="{{ path('macro_calculatrice') }}" method="POST">
+    <form action="{{ path('macro_calculatrice')~ '#resultat' }}" method="POST">
         <section class="calculatrice-content">
 
             <div>
@@ -43,7 +43,7 @@
             {{ form_rest(form) }}
         </section>
 
-        <section class="resultat-content">
+        <section class="resultat-content" id="resultat">
             <h3>Votre Résultat personnalisé</h3>
             <div class="rond">
                 <i class="fa fa-calculator" aria-hidden="true"></i>

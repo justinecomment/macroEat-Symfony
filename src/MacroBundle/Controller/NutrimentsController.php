@@ -90,14 +90,7 @@ class NutrimentsController extends Controller
                 $poidStabiliser = $calories;
                 $poidPrendre = $calories + 200;
             };
-            
-            return $this->render('MacroBundle:calculatrice:index.html.twig', array(
-                'form' => $form->createView(),
-                'poidPerdre' => $poidPerdre,
-                'poidStabiliser' => $poidStabiliser,
-                'poidPrendre' => $poidPrendre,
-            ));           
-
+            //ancre
         };
 
         return $this->render('MacroBundle:calculatrice:index.html.twig', array(

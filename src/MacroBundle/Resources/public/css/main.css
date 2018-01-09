@@ -211,7 +211,7 @@ nav .fa-calculator{
 }
 
 .calculatrice-content div:nth-of-type(6){
-    width: 92%;
+    width: 100%;
     text-align: center;
     margin-bottom: 100px;
 }
@@ -236,13 +236,22 @@ nav .fa-calculator{
     display : none;
 }
 
+.calculatrice-content div:nth-of-type(5){
+    display: block;
+    text-align: center;
+}
+
+.calculatrice-content div:nth-of-type(5) .rond {
+    margin-left: 20%;
+}
+
 
 /****  RESULTAT *********/
 
 .resultat-content{
     width: 56%;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 400px;
 }
 
 .resultat-content h3{

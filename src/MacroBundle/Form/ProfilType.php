@@ -16,14 +16,16 @@ class ProfilType extends AbstractType
         $builder
             ->add('sexe', ChoiceType::class, array(
                 'expanded' => true,
+                'multiple' => false,
                 'label'    => 'Vous êtes',
                 'choices'  => array(
+                    'null'    => null,
                     'Homme'    => 'homme',
-                    'Femme'     => 'femme' ,
+                    'Femme'    => 'femme' ,
                 )
             ))
             ->add('age', TextType::class, array(
-                'required' => true,
+                'required' => false,
                 'label'    => 'Quel âge avez-vous?'
             ))
             ->add('poid', TextType::class, array(
@@ -38,6 +40,7 @@ class ProfilType extends AbstractType
                 'expanded' => true,
                 'label'    => 'Évaluez votre activité journalière',
                 'choices'  => array(
+                    'null'              => null,
                     'Peu actif'         => 'Peu actif' ,
                     'Moyennement actif' => 'Moyennement actif',
                     'Très actif'        => 'Très actif' ,

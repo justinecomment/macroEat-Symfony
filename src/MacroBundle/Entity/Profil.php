@@ -3,6 +3,7 @@
 namespace MacroBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * categorie
@@ -22,28 +23,36 @@ class Profil
     private $id;
 
     /**
-     * @ORM\Column(name="sexe", type="string")
-     */
+    * @ORM\Column(name="sexe", type="string")
+    * @Assert\Choice(choices={"homme", "femme"}, message="Choose a valid genre.")
+    * @Assert\NotBlank()
+    */
     private $sexe;
 
     /**
-     * @ORM\Column(name="age", type="string")
+    * @ORM\Column(name="age", type="integer")
+     * @Assert\Regex(pattern="/^([0-9]+)$/", message="Entrez un nombre.")
+     * @Assert\NotBlank()
      */
     private $age;
     
     /**
-     * @ORM\Column(name="mensuration", type="string")
+     * @ORM\Column(name="mensuration", type="integer")
+     * @Assert\Regex(pattern="/^([\d][.|,][0-9]+)$/", message="Entrez votre taille en M.")
      */
     private $mensuration;
     
     /**
-     * @ORM\Column(name="poid", type="string")
-     */
+    * @ORM\Column(name="poid", type="integer")
+     * @Assert\Regex(pattern="/^([0-9]+)$/", message="Entrez un nombre.")
+    */
     private $poid;
 
     /**
-     * @ORM\Column(name="activite", type="string")
-     */
+    * @ORM\Column(name="activite", type="string")
+    * @Assert\Choice(choices={"Peu actif", "Moyennement actif", "Très actif"}, message="Choose a valid genre.")
+    * @Assert\NotBlank()
+    */
     private $activite;
     
 

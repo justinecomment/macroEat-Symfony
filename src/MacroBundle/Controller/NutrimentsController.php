@@ -42,7 +42,7 @@ class NutrimentsController extends Controller
 
         if ($form->isSubmitted() && $form->isValid() ) {
             dump($profil);
-
+            
             if($profil->getSexe() == "homme"){
                 $poid = 13.7516 * $profil->getPoid();
                 $taille = 500.33 * $profil->getMensuration();
@@ -66,7 +66,7 @@ class NutrimentsController extends Controller
                 $poidStabiliser = $calories;
                 $poidPrendre = $calories + 200;
             };
-
+            
             if($profil->getSexe() == "femme"){
                 $poid = 9.5634 * $profil->getPoid();
                 $taille = 184.96 * $profil->getMensuration();
@@ -90,13 +90,14 @@ class NutrimentsController extends Controller
                 $poidStabiliser = $calories;
                 $poidPrendre = $calories + 200;
             };
-
+            
             return $this->render('MacroBundle:calculatrice:index.html.twig', array(
                 'form' => $form->createView(),
                 'poidPerdre' => $poidPerdre,
                 'poidStabiliser' => $poidStabiliser,
                 'poidPrendre' => $poidPrendre,
-            ));
+            ));           
+
         };
 
         return $this->render('MacroBundle:calculatrice:index.html.twig', array(
@@ -104,7 +105,7 @@ class NutrimentsController extends Controller
             'poidPerdre' => $poidPerdre,
             'poidStabiliser' => $poidStabiliser,
             'poidPrendre' => $poidPrendre,
-));
+        ));
 
     }
     

@@ -227,6 +227,15 @@ nav .fa-calculator{
     margin-top: 49px !important;
 }
 
+.calculatrice-content div div:nth-of-type(2) ul li{
+    color: red;
+}
+
+.calculatrice-content #profil_sexe_0+label,
+.calculatrice-content #profil_activite_0+label {
+    display : none;
+}
+
 
 /****  RESULTAT *********/
 
@@ -290,3 +299,5 @@ nav .fa-calculator{
 .resultat-choix h5{
     text-align: center;
 }
+
+
